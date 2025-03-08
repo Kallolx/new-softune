@@ -26,7 +26,7 @@ export default function AboutUs() {
           >
             <div className="overflow-hidden">
               <motion.h2 
-                className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-black tracking-[-0.04em] mb-6"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold uppercase text-black tracking-[-0.06em] mb-6"
                 initial={{ y: "100%" }}
                 whileInView={{ y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}

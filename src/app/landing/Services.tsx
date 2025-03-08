@@ -73,7 +73,7 @@ export default function Services() {
     <section className="py-12 md:py-24 bg-white overflow-hidden">
       {/* Tab Selection */}
       <div className="container mx-auto px-4 md:px-6 mb-10 md:mb-16">
-        <div className="flex justify-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em]">
+        <div className="flex justify-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.06em]">
           <button 
             className={`mr-3 md:mr-4 cursor-pointer transition-colors duration-200 ${activeTab === 'creative' ? 'text-black' : 'text-gray-300 hover:text-black'}`}
             onClick={() => setActiveTab('creative')}

@@ -113,13 +113,13 @@ export default function Testimonials() {
     <section className="py-12 md:py-24 bg-white">
       {/* Section Header */}
       <div className="container mx-auto px-4 md:px-6 mb-10 md:mb-16">
-        <div className="flex text-black justify-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.04em]">
+        <div className="flex text-black justify-center text-4xl md:text-6xl lg:text-7xl font-bold tracking-[-0.06em]">
           <h2>What Clients Say</h2>
         </div>
       </div>
 
       {/* Testimonials Layout */}
-      <div className="w-full relative overflow-hidden">
+      <div className="w-full relative overflow-hidden border-t border-b border-gray-200">
         {isMobile ? (
           // Mobile Swiper Layout
           <Swiper
@@ -139,7 +139,7 @@ export default function Testimonials() {
               <SwiperSlide
                 key={testimonial.id}
                 style={{ width: '85vw', height: '350px' }}
-                className="border-r border-gray-200"
+                className="border-r border-gray-200 last:border-r-0"
               >
                 <TestimonialCard testimonial={testimonial} />
               </SwiperSlide>
@@ -151,7 +151,7 @@ export default function Testimonials() {
             {testimonials.map((testimonial, index) => (
               <div 
                 key={testimonial.id}
-                className="w-full md:w-1/2 lg:w-1/4 h-[400px] border-b md:border-r border-gray-200 last:border-r-0"
+                className="w-full md:w-1/2 lg:w-1/4 h-[400px] border-r border-gray-200 last:border-r-0"
                 style={{
                   borderRight: index === testimonials.length - 1 ? 'none' : undefined
                 }}
