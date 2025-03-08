@@ -2,6 +2,9 @@
 
 import Link from 'next/link';
 import { InstagramLogo, YoutubeLogo, TwitchLogo, TiktokLogo, ArrowUp } from '@phosphor-icons/react';
+import Image from 'next/image';
+import { HyperText } from '../components/ui/HyperText';
+
 
 const socialLinks = [
   {
@@ -38,11 +41,11 @@ const footerLinks = [
   },
   {
     title: 'Careers',
-    links: [
-      { name: 'Frontend Developer', href: '/careers/frontend-developer' },
+    links: [      
       { name: 'Backend Developer', href: '/careers/backend-developer' },
-      { name: 'DevOps Engineer', href: '/careers/devops-engineer' },
       { name: 'UI/UX Designer', href: '/careers/ui-ux-designer' },
+      { name: 'Graphics Designer', href: '/careers/graphics-designer' },
+      { name: 'Video Editor', href: '/careers/video-editor' },
       { name: 'View All Positions', href: '/careers' }
     ]
   },
@@ -70,7 +73,25 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 py-20">
           {/* Brand Column */}
           <div className="lg:col-span-2 space-y-6">
-            <h3 className="font-secondary uppercase text-2xl font-bold">Softune</h3>
+          <div className="flex items-center gap-4">
+                <Image
+                  src="/logo-white.svg"
+                  alt="SofTune Logo"
+                  width={140}
+                  height={240}
+                  priority
+                  className="h-[40px] w-[23px]"
+                />
+                <Link href="/" onClick={() => {}}>
+                  <HyperText
+                    className="text-3xl py-0 font-bold text-white uppercase font-secondary"
+                    duration={600}
+                    as="span"
+                  >
+                    SofTune
+                  </HyperText>
+                </Link>
+              </div>
             <p className="text-zinc-400 font-dmSans max-w-md">
               Empowering digital dreams with premium hosting and innovative solutions. Join our team and help shape the future of web technology.
             </p>
