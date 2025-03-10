@@ -12,11 +12,11 @@ interface ButtonProps {
 }
 
 export default function Button({ href, children, icon, className = '', variant = 'default' }: ButtonProps) {
-  const baseStyles = "relative block py-4 font-bold text-xl uppercase text-center";
+  const baseStyles = "relative block py-4 px-8 font-bold text-xl uppercase text-center overflow-hidden";
   
   const variants = {
-    default: "bg-black text-white overflow-hidden group",
-    white: "bg-white text-black hover:bg-zinc-100 transition-colors duration-300"
+    default: "bg-black text-white group hover:text-white before:absolute before:inset-0 before:bg-[#ff4d00] before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-700 before:ease-out",
+    white: "bg-[#ff4d00] text-white group hover:text-[#ff4d00] before:absolute before:inset-0 before:bg-white before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-700 before:ease-out"
   };
 
   return (
@@ -24,17 +24,11 @@ export default function Button({ href, children, icon, className = '', variant =
       href={href} 
       className={`${baseStyles} ${variants[variant]} ${className}`}
     >
-      {variant === 'default' && (
-        <span 
-          className="absolute top-0 left-0 w-[20%] h-full bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-[-10deg] transform -translate-x-full group-hover:translate-x-[500%] transition-transform duration-700 ease-out"
-        ></span>
-      )}
-      
       {/* Text and icon container */}
-      <span className="relative z-10 flex items-center justify-center">
+      <span className="relative z-10 flex items-center justify-center transition-colors duration-500">
         <span className="font-bold">{children}</span>
         {icon && (
-          <span className="ml-2">
+          <span className="ml-2 transition-transform duration-500 group-hover:translate-x-1">
             {icon}
           </span>
         )}
