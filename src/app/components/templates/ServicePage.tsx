@@ -75,7 +75,7 @@ export default function ServicePage({ service }: ServicePageProps) {
               </p>
               <Button 
                 href="#contact"
-                variant="orange"
+                variant="white"
                 icon={<ArrowRight className="w-6 h-6" weight="bold" />}
               >
                 Get Started Today
