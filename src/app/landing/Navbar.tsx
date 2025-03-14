@@ -376,13 +376,13 @@ function MobileMenu({
                 >
                   <Link
                     href="/signup"
-                    className="bg-white text-black h-16 w-full flex items-center justify-center space-x-2 hover:bg-gray-100 transition-colors"
+                    className="relative overflow-hidden group bg-[#ff4d00] text-white h-16 w-full flex items-center justify-center space-x-2 before:absolute before:inset-0 before:bg-black before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-700 before:ease-out"
                     onClick={onClose}
                   >
-                    <span className="font-bold text-xl uppercase">
+                    <span className="relative font-bold text-xl uppercase">
                       START NOW
                     </span>
-                    <ArrowRight className="w-6 h-6" weight="bold" />
+                    <ArrowRight className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" weight="bold" />
                   </Link>
                 </motion.div>
               </div>
@@ -486,12 +486,16 @@ export default function Navbar() {
             {
               title: "Website Design",
               href: "/services/website-design",
-              icon: <Desktop weight="fill" />,
+              icon: <Image src="/images/icons/navicons/web/webdesign.svg" alt="Local SEO" width={24} height={24} />,
+            },{
+              title: "Website Development",
+              href: "/services/website-development",
+              icon: <Image src="/images/icons/navicons/web/develop.svg" alt="Local SEO" width={24} height={24} />,
             },
             {
               title: "Web Hosting",
               href: "/services/web-hosting",
-              icon: <Database weight="fill" />,
+              icon: <Image src="/images/icons/navicons/web/hosting.svg" alt="Local SEO" width={24} height={24} />,
             },
           ],
         },
@@ -501,17 +505,17 @@ export default function Navbar() {
             {
               title: "Videography",
               href: "/services/videography",
-              icon: <VideoCamera weight="fill" />,
+              icon: <Image src="/images/icons/navicons/web/video.svg" alt="Local SEO" width={24} height={24} />,
             },
             {
               title: "Photography",
               href: "/services/photography",
-              icon: <Camera weight="fill" />,
+              icon: <Image src="/images/icons/navicons/web/photo.svg" alt="Local SEO" width={24} height={24} />,
             },
             {
               title: "Graphic Design",
               href: "/services/graphic-design",
-              icon: <Scissors weight="fill" />,
+              icon: <Image src="/images/icons/navicons/web/graphic.svg" alt="Local SEO" width={24} height={24} />,
             },
           ],
         },
@@ -618,21 +622,16 @@ export default function Navbar() {
             </NavLink>
           </div>
 
-          {/* CTA Button */}
-          <div className="hidden xl:block h-full">
-            <Link
-              href="/signup"
-              className="bg-white text-black h-full px-8 flex items-center justify-center space-x-2 hover:bg-black hover:text-white transition-colors group"
-            >
-              <span className="font-bold text-xl uppercase font-secondary group-hover:text-white transition-colors">
-                START NOW
-              </span>
-              <ArrowRight
-                className="w-6 h-6 text-black group-hover:text-white transition-colors"
-                weight="bold"
-              />
-            </Link>
-          </div>
+          {/* Start Now Button */}
+          <Link
+            href="/signup"
+            className="hidden 2xl:flex relative overflow-hidden group bg-black text-white h-20 px-8 items-center space-x-2 before:absolute before:inset-0 before:bg-[#ff4d00] before:origin-left before:scale-x-0 hover:before:scale-x-100 before:transition-transform before:duration-700 before:ease-out"
+          >
+            <span className="relative font-bold text-xl uppercase">
+              START NOW
+            </span>
+            <ArrowRight className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" weight="bold" />
+          </Link>
 
           {/* Mobile Menu Button */}
           <button
