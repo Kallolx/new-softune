@@ -90,7 +90,7 @@ export default function Contact() {
             ></textarea>
 
             <div className="flex justify-center">
-              <button type="submit">
+              <div className="w-full">
                 <Button
                   className="px-12 py-4 text-lg"
                   icon={<PaperPlaneTilt className="w-5 h-5" />}
@@ -98,7 +98,7 @@ export default function Contact() {
                 >
                   Submit
                 </Button>
-              </button>
+              </div>
             </div>
           </form>
         </div>

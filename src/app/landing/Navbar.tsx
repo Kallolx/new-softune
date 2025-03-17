@@ -4,20 +4,8 @@ import Link from "next/link";
 import { useState } from "react";
 import {
   ArrowRight,
-  GoogleLogo,
-  TiktokLogo,
-  FacebookLogo,
-  SnapchatLogo,
-  MagnifyingGlass,
   Buildings,
-  UsersThree,
-  Globe,
-  TwitterLogo,
-  Desktop,
   Database,
-  Scissors,
-  Camera,
-  VideoCamera,
   Hexagon,
   Trophy,
   ChatCircle,
@@ -207,12 +195,12 @@ function MobileMenu({
 
   const sections = [
     {
-      title: "MARKETING",
-      items: navItems.marketing.sections.flatMap((section) => section.items),
-    },
-    {
       title: "CREATIVE",
       items: navItems.creative.sections.flatMap((section) => section.items),
+    },
+    {
+      title: "MARKETING",
+      items: navItems.marketing.sections.flatMap((section) => section.items),
     },
     {
       title: "ABOUT US",
@@ -382,7 +370,10 @@ function MobileMenu({
                     <span className="relative font-bold text-xl uppercase">
                       START NOW
                     </span>
-                    <ArrowRight className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" weight="bold" />
+                    <ArrowRight
+                      className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+                      weight="bold"
+                    />
                   </Link>
                 </motion.div>
               </div>
@@ -407,27 +398,62 @@ export default function Navbar() {
             {
               title: "Google Ads",
               href: "/services/google-ads",
-              icon: <Image src="/images/icons/navicons/paid-media/google.svg" alt="Google Ads" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/paid-media/google.svg"
+                  alt="Google Ads"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "TikTok Ads",
               href: "/services/tiktok-ads",
-              icon: <Image src="/images/icons/navicons/paid-media/tiktok.svg" alt="TikTok Ads" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/paid-media/tiktok.svg"
+                  alt="TikTok Ads"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Facebook Ads",
               href: "/services/facebook-ads",
-              icon: <Image src="/images/icons/navicons/paid-media/facebook.svg" alt="Facebook Ads" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/paid-media/facebook.svg"
+                  alt="Facebook Ads"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Instagram Ads",
               href: "/services/instagram-ads",
-              icon: <Image src="/images/icons/navicons/paid-media/instagram.svg" alt="Instagram Ads" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/paid-media/instagram.svg"
+                  alt="Instagram Ads"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Youtube Ads",
               href: "/services/youtube-ads",
-              icon: <Image src="/images/icons/navicons/paid-media/youtube.svg" alt="Youtube Ads" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/paid-media/youtube.svg"
+                  alt="Youtube Ads"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
           ],
         },
@@ -437,27 +463,62 @@ export default function Navbar() {
             {
               title: "Audit",
               href: "/services/audit",
-              icon: <Image src="/images/icons/navicons/organic-marketing/search.svg" alt="Audit" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/search.svg"
+                  alt="Audit"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Enterprise SEO",
               href: "/services/enterprise-seo",
-              icon: <Image src="/images/icons/navicons/organic-marketing/arrow.svg" alt="Enterprise SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/arrow.svg"
+                  alt="Enterprise SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Local SEO",
               href: "/services/local-seo",
-              icon: <Image src="/images/icons/navicons/organic-marketing/globe.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/globe.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Organic Social Media",
               href: "/services/social-media",
-              icon: <Image src="/images/icons/navicons/organic-marketing/user.svg" alt="Organic Social Media" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/user.svg"
+                  alt="Organic Social Media"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Name, Image & Likeness",
               href: "/services/nil",
-              icon: <Image src="/images/icons/navicons/organic-marketing/arrow.svg" alt="Name, Image & Likeness" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/arrow.svg"
+                  alt="Name, Image & Likeness"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
           ],
         },
@@ -467,12 +528,26 @@ export default function Navbar() {
             {
               title: "Consultation",
               href: "/services/consultation",
-              icon: <Image src="/images/icons/navicons/organic-marketing/user.svg" alt="Organic Social Media" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/user.svg"
+                  alt="Organic Social Media"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Partner Network",
               href: "/services/partner-network",
-              icon: <Image src="/images/icons/navicons/organic-marketing/globe.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/organic-marketing/globe.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
           ],
         },
@@ -486,16 +561,38 @@ export default function Navbar() {
             {
               title: "Website Design",
               href: "/services/website-design",
-              icon: <Image src="/images/icons/navicons/web/webdesign.svg" alt="Local SEO" width={24} height={24} />,
-            },{
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/webdesign.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
+            },
+            {
               title: "Website Development",
               href: "/services/website-development",
-              icon: <Image src="/images/icons/navicons/web/develop.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/develop.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Web Hosting",
               href: "/services/web-hosting",
-              icon: <Image src="/images/icons/navicons/web/hosting.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/hosting.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
           ],
         },
@@ -505,17 +602,38 @@ export default function Navbar() {
             {
               title: "Videography",
               href: "/services/videography",
-              icon: <Image src="/images/icons/navicons/web/video.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/video.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Photography",
               href: "/services/photography",
-              icon: <Image src="/images/icons/navicons/web/photo.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/photo.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
             {
               title: "Graphic Design",
               href: "/services/graphic-design",
-              icon: <Image src="/images/icons/navicons/web/graphic.svg" alt="Local SEO" width={24} height={24} />,
+              icon: (
+                <Image
+                  src="/images/icons/navicons/web/graphic.svg"
+                  alt="Local SEO"
+                  width={24}
+                  height={24}
+                />
+              ),
             },
           ],
         },
@@ -573,20 +691,6 @@ export default function Navbar() {
           {/* Desktop Navigation */}
           <div className="hidden xl:flex space-x-6 absolute left-1/2 transform -translate-x-1/2">
             <div
-              onMouseEnter={() => setActiveDropdown("marketing")}
-              onMouseLeave={() => setActiveDropdown(null)}
-              className="relative"
-            >
-              <NavLink href="#" width={120}>
-                MARKETING
-              </NavLink>
-              <MegaMenu
-                isOpen={activeDropdown === "marketing"}
-                sections={navItems.marketing.sections}
-                position="left-[120px]"
-              />
-            </div>
-            <div
               onMouseEnter={() => setActiveDropdown("creative")}
               onMouseLeave={() => setActiveDropdown(null)}
               className="relative"
@@ -597,6 +701,20 @@ export default function Navbar() {
               <MegaMenu
                 isOpen={activeDropdown === "creative"}
                 sections={navItems.creative.sections}
+                position="left-[120px]"
+              />
+            </div>
+            <div
+              onMouseEnter={() => setActiveDropdown("marketing")}
+              onMouseLeave={() => setActiveDropdown(null)}
+              className="relative"
+            >
+              <NavLink href="#" width={120}>
+                MARKETING
+              </NavLink>
+              <MegaMenu
+                isOpen={activeDropdown === "marketing"}
+                sections={navItems.marketing.sections}
                 position="left-[120px]"
               />
             </div>
@@ -630,7 +748,10 @@ export default function Navbar() {
             <span className="relative font-bold text-xl uppercase">
               START NOW
             </span>
-            <ArrowRight className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1" weight="bold" />
+            <ArrowRight
+              className="relative w-6 h-6 transition-transform duration-500 group-hover:translate-x-1"
+              weight="bold"
+            />
           </Link>
 
           {/* Mobile Menu Button */}
